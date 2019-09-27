@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            background-color:#fff;
+            background-image: url(images/1.jpg);
+        }
+        #top{
+            width:980px;
+            height:150px;
+            margin:0 100px;
+            padding:0;
+        }
+        #top p{
+            margin:0 0 0 150px;
+        }
+        #nav{
+            width:980px;
+            height:40px;
+            margin:0 auto;
+        }
+        #nav ul{
+            width:980px;
+            height:40px;
+            margin:0 0 0 50px;
+            padding:0 0 0 -50px;
+        }
+        #nav ul li{
+            list-style-type: none;
+            font-family: "楷体";
+            font-weight: bold;
+            float: left;
+            width: 110px;
+            height:40px;
+            line-height: 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.0) url(images/linkr.gif) no-repeat 0 50% ;
+        }
+        #nav ul li a{
+        font-size:16px;
+        text-decoration:none;
+        color:#000;
+       }
+        #nav ul li a:hover{
+        color:#ff0;
+       }
+        #slide{
+            width: 650px;
+            height: 250px;
+            margin:0 auto;
+        }
+        #img{
+            width: 650px;
+            height: 250px;
+            overflow:hidden;
+        }
+        .img{
+            margin:0 0 0 150px;
+        }
+        #arrow{
+            height: 50px;
+            position:relative;
+            top:-130px;
+        }
+        #previous,#next{
+            width: 30px;
+            height: 50px;
+            background-color: rgba(0,0,0,0.2);
+            font-size:40px;
+            line-height:50px;
+            text-align:center;
+            cursor:pointer;
+        }
+        #previous{
+            float:left;
+        }
+        #next{
+            float:right;
+        }
+        #circle{
+            height: 150px;
+            position:relative;
+            top:150px;
+            overflow:hidden;
+        }
+        #dot{
+            height: 150px;
+            position:relative;
+            top:-230px;
+            left:100px;
+        }
+        #dot h1{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #000;
+            color:#fff;
+            font-size: 12px;
+            text-align: center;
+            line-height: 20px;
+            float:left;
+            margin:0 0 0 3px;
+            cursor:pointer;
+        }
+        #dot h1.red{
+            background-color:#f00;
+        }
+        #main{
+            width: 920px;
+            height: 300px;
+            margin:-500px 0 0 0;
+        }
+        #left{
+            width: 200px;
+            height: 300px;
+            margin:0 0 0 -28px;
+            background-color:#fff;
+            font-family: "楷体";
+            font-weight: bold;
+            float: left;
+            color:#050505;
+            text-indent:2em;
+        }
+        #left ul{
+            list-style-type:none;
+            font-size:16px;
+        }
+        #left ul li:first-child{
+        color:#EE2C2C;
+        font-weight: bolder;
+        font-size:20px;
+        }
+        #middle{
+            width: 200px;
+            height: 300px;
+            margin:0 auto;
+            background-color:#fff;
+            font-family: "楷体";
+            font-weight: bold;
+            float: left;
+            text-align:center;
+            line-height:30px;
+            color:#525252;
+        }
+        #middle ul{
+            list-style-type:none;
+             font-size:17px;
+        }
+        #middle ul li{
+            font-family: "楷体";
+            font-weight: bold;
+            text-align:center;
+            line-height:30px;
+            color:#333333;
+        }
+        #middle ul li:first-child{
+        color:#EE2C2C;
+        font-weight: bolder;
+        font-size:20px;
+        }
+        #right{
+            width: 230px;
+            height: 300px;
+            margin:-50px 0 0 0;
+            background-color:#fff;
+            font-family: "楷体";
+            font-weight: bold;
+            float: left;
+
+        }
+        #right ul{
+            list-style-type:none;
+            font-size:17px;
+        }
+        #right ul li{
+            font-family: "楷体";
+            font-weight: bold;
+            line-height:28px;
+            font-size:20px;
+            color:#EE2C2C;
+            text-align:center;
+        }
+        #right ul  p{
+            font-family: "楷体";
+            font-weight: bold;
+            line-height:18px;
+            font-size:16px;
+            color:#2E2E2E;
+            text-indent:2em;
+        }
+        #img{
+            margin:0 0 0 0;
+        }
+        #footer{
+        width: 900px;
+        height: 50px;
+        text-align:center;
+        margin:200px 0 0 -80px;
+        padding:0 80px ;
+        }
+        #footer p{
+        float:left;
+        font-size:14px;
+        color:#CD9504;
+        text-align:center;
+        }
+        .imgtitle2{
+            margin:20px 0 0 0;
+        }
+        .img2{
+            margin:20px 0 0 0;
+        }
+        #top1{
+            margin:-40px 0 0 750px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+    <p>欢迎来到儿童故事-童话故事大全网，请记住我们的网址 www.xxxxxxx.com</p>
+    <img  class="img" src="images/BB2.png" />
+    <div id="top1">
+    <input type="text" name="keyword" id="text" onfucus="if(this.value=='输入您需要搜索的故事书') {this.value=";}" onblur="if(this.value==") {this.value='输入您需要搜索的故事书';}" value="输入您需要搜索的故事书">
+    </div>
+    </div>
+    <div id="nav">
+         <ul>
+            <li><a href="#">首页</li>
+            <li><a href="#">经典童话</li>
+            <li><a href="#">寓言故事</li>
+            <li><a href="#">睡前故事</li>
+            <li><a href="#">益智故事</li>
+            <li><a href="#">格林童话</li>
+            <li><a href="#">安徒生童话</li>
+            <li><a href="#">一千零一夜</li>
+        </ul>
+    </div>
+    <div id="slide">
+        <div id="img">
+            <img src="images/f1.jpg" />
+            <img src="images/f2.png" />
+            <img src="images/f3.jpg" />
+            <img src="images/f4.jpg" />
+            <img src="images/f5.jpg" />
+            <img src="images/f6.jpg" />
+            <img src="images/f7.jpg" />
+            <img src="images/f8.jpeg" />
+        </div>
+        <div id="arrow">
+            <div id="previous"><</div>
+            <div id="next">></div>
+        </div>
+    <div id="circle">
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    </div>
+    <div id="dot">
+        <h1 class="red">1</h1>
+        <h1>2</h1>
+        <h1>3</h1>
+        <h1>4</h1>
+        <h1>5</h1>
+        <h1>6</h1>
+        <h1>7</h1>
+        <h1>8</h1>
+    </div>
+   <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var n=0;//记录当前图片序号
+        function slideImg(){
+            n++;
+            if(n>$("#circle h1").length-1){
+                n=0;
+            }
+            $("#img img").hide();
+            $("#img img").eq(n).fadeIn(500);
+            $("#circle h1").removeClass('red');
+            $("#circle h1").eq(n).addClass('red');
+            $("#dot h1").removeClass('red');
+            $("#dot h1").eq(n).addClass('red');
+        }
+        var interval=setInterval(slideImg,5000);
+        $(document).ready(function(){
+            $("#previous").click(function(event){
+                n--;
+                if(n<0){
+                    n=$("#circle h1").length-1;
+                }
+                $("#img img").hide();
+                $("#img img").eq(n).fadeIn(500);
+                $("#circle h1").removeClass('red');
+                $("#circle h1").eq(n).addClass('red');
+                $("#dot h1").removeClass('red');
+                $("#dot h1").eq(n).addClass('red');
+            });
+
+            $("#next").click(function(event){
+                n++;
+                if(n>$("#circle h1").length-1){
+                    n=0;
+                }
+                $("#img img").hide();
+                $("#img img").eq(n).fadeIn(500);
+                $("#circle h1").removeClass('red');
+                $("#circle h1").eq(n).addClass('red');
+                $("#dot h1").removeClass('red');
+                $("#dot h1").eq(n).addClass('red');
+            });
+        });
+    </script>
+    <div id="main">
+        <div id="left">
+        <ul>
+            <li>今日故事</li>
+            <p>一个人在高山之巅的鹰巢里，抓到了一只幼鹰，他把幼鹰带回家，养在鸡笼里。这只幼鹰和鸡一起啄食、嬉闹和休息。它以为自己是一只鸡。 这只鹰渐渐长大，羽翼丰满了，主人想把它训练成猎鹰，可是由于终日和鸡混在一起，它已经变得和鸡完全一样，根本没有飞的愿望了。主人试了各种办法，都毫无效果，最后把它带到山顶上，一把将它扔了出去。这只鹰像块石头似的，直掉下去，慌乱之中它拼命地扑打翅膀，就这样，它终于飞了起来！</p>
+        </ul>
+        </div>
+    <div id="middle">
+    <img  class="img2" src="images/an.jpg" />
+        <ul>
+            <li>今日推荐</li>
+            <li>美人鱼的故事</li>
+            <li>白雪公主与七个小矮人</li>
+            <li>小蝌蚪找妈妈</li>
+            <li>乌鸦喝水</li>
+            <li>龟兔赛跑</li>
+        </ul>
+    </div>
+    <div id="right">
+    <ul>
+        <li>今日之星</li>
+        <p> 最近，越来越多的小朋友向我们表示了感谢！因为本网站丰富的故事，使孩子们在班级里获得了“阅读之星”的荣誉称号.他们给我们发来照片等，今天我们从中选取了一位小朋友来给大家树立养成阅读好习惯的榜样！<p>
+    </ul>
+        <img class="imgtitle2" src="images/x1.jpg" />
+    </div>
+    </div>
+    <div id="footer">
+    <p>Copyright ® 2011 - 2022 儿童故事-童话故事大全 版权所有 我们一直在努力！ 桂ICP备11006735号-1</p>
+    <p>联系QQ：7040888626 投稿邮箱：704088626@qq.com</p>
+    </div>
+</body>
+</html>
